@@ -1,1 +1,1 @@
-# rsschool-cv
+Link to the [CV](https://suhodoleca.github.io/rsschool-cv/cv)
