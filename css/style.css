@@ -1,0 +1,37 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	background-color: #cecece;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.conteiner {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.main-item {
+	margin-bottom: 10px;
+	border: 1px solid;
+	padding: 5px;
+}
+
+.main-item:hover {
+	background-color: #000;
+	color: #fff;
+	transition: .5s;
+}
+
+.header-img img {
+	border: 1px solid;
+	max-width: 300px;
+	max-height: 500px;
+}
+
