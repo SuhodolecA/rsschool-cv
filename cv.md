@@ -1,9 +1,10 @@
 ## Anton Sukhadolets
 
 ***Contact Info***: 
-tel: +375333130021;
-email: Kut18@tut.by;
-linkedin: https://www.linkedin.com/in/anton-suhodolec-276283a3/;
+- tel: +375333130021;
+- email: Kut18@tut.by;
+- linkedin: https://www.linkedin.com/in/anton-suhodolec-276283a3/;
+
 ***Summary***:
 Hi, my name is Anton and I like web programming. I don't have much experience, but I try to get new knowledge every day.
 My strengths are:
