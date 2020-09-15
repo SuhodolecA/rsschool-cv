@@ -14,7 +14,7 @@ My strengths are:
 - continuous learning (self-development)
 - appreciate the time
 
-I quess my weaknesses are:
+I guess my weaknesses are:
 - self-criticism
 - too detail oriented
 - too kind
