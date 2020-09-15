@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+ul {
+	margin-left: 20px;
+}
+
 body{
 	font-family: Arial, sans-serif;
 	background-color: #cecece;
@@ -11,19 +15,19 @@ body{
 	line-height: 1.5;
 }
 
-.conteiner {
+.container {
 	max-width: 1024px;
 	margin: 0 auto;
 	padding: 20px;
 }
 
-.main-item {
+.main__item {
 	margin-bottom: 10px;
 	border: 1px solid;
 	padding: 5px;
 }
 
-.main-item:hover {
+.main__item:hover {
 	background-color: #000;
 	color: #fff;
 	transition: .5s;
@@ -34,4 +38,6 @@ body{
 	max-width: 300px;
 	max-height: 500px;
 }
+
+
 
