@@ -21,7 +21,7 @@ I guess my weaknesses are:
  
 In my learning I use such online resources as:
 * codecademy ([link to my profile](https://www.codecademy.com/profiles/design6714341631))
-* codewars ([link to my profile](https://www.codewars.com/users/Ant11))
+* codewars ([link to my profile](https://www.codewars.com/users/SuhodolecA))
 * freecodecamp ([link to my profile](https://www.freecodecamp.org/fccd05e9812-e2ea-4038-920a-15d1b3799051))
 * code-basics.com
 and some others...
