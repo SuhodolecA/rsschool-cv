@@ -1,0 +1,279 @@
+@import 'normalize.scss';
+
+
+// === common styles ===
+:root {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.4rem;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: hsl(0, 0%, 0%);
+    transition: all .3s linear;
+    text-decoration-color: transparent;
+
+    &:hover {
+        font-weight: 600;
+        text-decoration-color: hsl(0, 0%, 20%);
+    }
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.cv-container {
+    max-width: 123rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.caption {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid;
+
+    @media (max-width: 34.375rem) {
+        font-size: 2rem;
+    }
+}
+
+.list-item {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    margin-right: .5rem;
+}
+
+.skills-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.education-name {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.education-place {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-years {
+    font-size: 1.7rem;
+}
+
+// === / common styles ===
+
+
+// === header ===
+.cv-header {
+    margin-bottom: 3rem;
+    padding: 1rem;
+
+    &-content {
+        display: flex;
+        align-items: center;
+
+        &__avatar {
+            border-radius: 50%;
+            border: 1px solid;
+            overflow: hidden;
+            width: 15rem;
+            height: 15rem;
+            background: url('../image/photo.jpg') center center no-repeat;
+            background-size: cover;
+
+            img {
+                width: 0;
+                height: 0;
+            }
+
+            @media (max-width: 46.875rem) {
+                width: 10rem;
+                height: 10rem;
+            }
+
+            @media (max-width: 28.125rem) {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        &__data {
+            margin-left: 4.5rem;
+
+            &-name {
+                font-size: 6rem;
+
+                @media (max-width: 66.875rem) {
+                    font-size: 4rem;
+                }
+
+                @media (max-width: 46.875rem) {
+                    font-size: 4rem;
+                }
+
+                @media (max-width: 34.375rem) {
+                    font-size: 3rem;
+                }
+
+                @media (max-width: 25rem) {
+                    font-size: 2rem;
+                }
+            }
+
+            &-title {
+                font-size: 3rem;
+
+                @media (max-width: 34.375rem) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
+
+// === / header ===
+
+// === main ===
+.cv-main {
+
+    .cv-container {
+        display: flex;
+    }
+
+    &__about {
+        flex-basis: 30%;
+        margin-right: 1.5rem;
+    }
+
+    &__description {
+        flex-basis: 70%;
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: .5rem;
+
+            @media (max-width: 34.375rem) {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+
+            @media (max-width: 34.375rem) {
+                font-size: 1.5rem;
+            }
+        }
+
+        h4 {
+            font-size: 2rem;
+
+            @media (max-width: 34.375rem) {
+                font-size: 1.5rem;
+            }
+        }
+
+        ul {
+            list-style: circle;
+            margin-left: 1.5rem;
+        }
+
+        &-code {
+
+            pre + pre {
+                margin-top: 1em;
+            }
+
+            pre {
+                background-color: hsla(0, 0%, 80%, 0.99);
+                border-radius: 1em;
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+                white-space: pre-line;
+
+                @media (max-width: 34.375rem) {
+                    font-size: 0.6em;
+                }
+
+                @media (max-width: 25rem) {
+                    font-size: .6rem;
+                }
+            }
+        }
+    }
+
+}
+
+// === / main ===
+
+// === footer ===
+.cv-footer {
+    margin-top: 1em;
+    svg {
+        width: 5rem;
+        height: 5rem;
+
+        @media (max-width: 34.375rem) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+        @media (max-width: 28.125rem) {
+            font-size: 1.2rem;
+        }
+    }
+
+    a {
+        margin-left: 1rem;
+
+        @media (max-width: 34.375rem) {
+            margin-left: .5rem;
+        }
+    }
+
+    time {
+        margin-left: 1em;
+    }
+
+}
+
+// === / footer ===

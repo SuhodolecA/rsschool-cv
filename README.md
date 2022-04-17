@@ -1,1 +1,1 @@
-https://suhodoleca.github.io/rsschool-cv/cv
+https://suhodoleca.github.io/rsschool-cv/
