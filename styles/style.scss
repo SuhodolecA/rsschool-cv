@@ -144,7 +144,7 @@ body {
 
             &-title {
                 font-size: 3rem;
-        
+
                 @media (max-width: 34.375rem) {
                     font-size: 2rem;
                 }
@@ -152,6 +152,7 @@ body {
         }
     }
 }
+
 // === / header ===
 
 // === main ===
@@ -171,7 +172,7 @@ body {
 
         .title {
             font-size: 3rem;
-            margin-bottom: .5rem;  
+            margin-bottom: .5rem;
 
             @media (max-width: 34.375rem) {
                 font-size: 2rem;
@@ -180,23 +181,60 @@ body {
 
         p {
             font-size: 2rem;
-            @media (max-width: 34.375rem) {
-                font-size: 1.5rem;
-            } 
-        }
 
-        h4 {
-            font-size: 2rem;
             @media (max-width: 34.375rem) {
                 font-size: 1.5rem;
             }
         }
-    
+
+        h4 {
+            font-size: 2rem;
+
+            @media (max-width: 34.375rem) {
+                font-size: 1.5rem;
+            }
+        }
+
         ul {
             list-style: circle;
             margin-left: 1.5rem;
         }
     }
-    
+
 }
+
 // === / main ===
+
+// === footer ===
+.cv-footer {
+    svg {
+        width: 5rem;
+        height: 5rem;
+
+        @media (max-width: 34.375rem) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 28.125rem) {
+            font-size: 1.2rem;
+        }
+    }
+
+    a {
+        margin-left: 1rem;
+
+        @media (max-width: 34.375rem) {
+            margin-left: .5rem;
+        }
+    }
+
+}
+
+// === / footer ===

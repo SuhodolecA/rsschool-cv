@@ -565,4 +565,44 @@ body {
   list-style: circle;
   margin-left: 1.5rem;
 }
+
+.cv-footer svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+@media (max-width: 34.375rem) {
+  .cv-footer svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.cv-footer p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 28.125rem) {
+  .cv-footer p {
+    font-size: 1.2rem;
+  }
+}
+
+.cv-footer a {
+  margin-left: 1rem;
+}
+
+@media (max-width: 34.375rem) {
+  .cv-footer a {
+    margin-left: .5rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
