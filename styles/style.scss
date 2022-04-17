@@ -4,7 +4,7 @@
 // === common styles ===
 :root {
     box-sizing: border-box;
-    font-size: 100%;
+    font-size: 10px;
 }
 
 *,
@@ -107,10 +107,15 @@ body {
             border-radius: 50%;
             border: 1px solid;
             overflow: hidden;
-            width: 20rem;
-            height: 20rem;
+            width: 15rem;
+            height: 15rem;
             background: url('../image/photo.jpg') center center no-repeat;
             background-size: cover;
+
+            img {
+                width: 0;
+                height: 0;
+            }
 
             @media (max-width: 46.875rem) {
                 width: 10rem;
@@ -128,6 +133,10 @@ body {
 
             &-name {
                 font-size: 6rem;
+
+                @media (max-width: 66.875rem) {
+                    font-size: 4rem;
+                }
 
                 @media (max-width: 46.875rem) {
                     font-size: 4rem;
@@ -199,6 +208,30 @@ body {
             list-style: circle;
             margin-left: 1.5rem;
         }
+
+        &-code {
+
+            pre + pre {
+                margin-top: 1em;
+            }
+
+            pre {
+                background-color: hsla(0, 0%, 80%, 0.99);
+                border-radius: 1em;
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+                white-space: pre-line;
+
+                @media (max-width: 34.375rem) {
+                    font-size: 0.6em;
+                }
+
+                @media (max-width: 25rem) {
+                    font-size: .6rem;
+                }
+            }
+        }
     }
 
 }
@@ -207,6 +240,7 @@ body {
 
 // === footer ===
 .cv-footer {
+    margin-top: 1em;
     svg {
         width: 5rem;
         height: 5rem;
@@ -221,6 +255,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0;
 
         @media (max-width: 28.125rem) {
             font-size: 1.2rem;
@@ -233,6 +268,10 @@ body {
         @media (max-width: 34.375rem) {
             margin-left: .5rem;
         }
+    }
+
+    time {
+        margin-left: 1em;
     }
 
 }
