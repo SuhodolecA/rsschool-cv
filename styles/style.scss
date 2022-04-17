@@ -1,0 +1,78 @@
+@import 'normalize.scss';
+
+
+// === common styles ===
+:root {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.4rem;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: hsl(0, 0%, 0%);
+    transition: all .3s linear;
+    text-decoration-color: transparent;
+
+    &:hover {
+        font-weight: 600;
+        text-decoration-color: hsl(0, 0%, 20%);
+    }
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+.cv-container {
+    max-width: 123rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.caption {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid;
+
+    @media (max-width: 34.375rem) {
+        font-size: 2rem;
+    }
+}
+
+.list-item {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    margin-right: .5rem;
+}
+
+.skills-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+// === common styles ===
