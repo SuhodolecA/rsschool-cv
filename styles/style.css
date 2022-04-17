@@ -422,4 +422,78 @@ body {
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
+
+.cv-header {
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+.cv-header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cv-header-content__avatar {
+  border-radius: 50%;
+  border: 1px solid;
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
+  background: url("../image/photo.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 46.875rem) {
+  .cv-header-content__avatar {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media (max-width: 28.125rem) {
+  .cv-header-content__avatar {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.cv-header-content__data {
+  margin-left: 4.5rem;
+}
+
+.cv-header-content__data-name {
+  font-size: 6rem;
+}
+
+@media (max-width: 46.875rem) {
+  .cv-header-content__data-name {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 34.375rem) {
+  .cv-header-content__data-name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  .cv-header-content__data-name {
+    font-size: 2rem;
+  }
+}
+
+.cv-header-content__data-title {
+  font-size: 3rem;
+}
+
+@media (max-width: 34.375rem) {
+  .cv-header-content__data-title {
+    font-size: 2rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
