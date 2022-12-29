@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML, CSS & Git Basics</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Prata&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
         integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
@@ -16,28 +20,58 @@
 <body>
 
     <div class="cv">
-        <!-- cv-header -->
         <header class="cv-header">
             <div class="cv-container">
-                <div class="cv-header-content">
-                    <div class="cv-header-content__avatar">
-                        <img src="image/photo.jpg" alt="avatar">
+                <div class="cv-header-intro">
+                    <div class="cv-header-intro__personal-info">
+                        <div class="cv-header-intro__avatar"></div>
+                        <div class="cv-header-intro__data">
+                            <h1 class="cv-header-intro__name">Anton Sukhadolets</h1>
+                            <p class="cv-header-intro__title">UpSkill Me student</p>
+                        </div>
                     </div>
-                    <div class="cv-header-content__data">
-                        <h1 class="cv-header-content__data-name">Anton Sukhadolets</h1>
-                        <p class="cv-header-content__data-title">Rsschool student</p>
+                    <div class="cv-header-intro__self-presentation">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam dolorem exercitationem quaerat
+                        illum
+                        nostrum fugiat porro sapiente rem officiis? Labore distinctio nostrum in vel quidem modi, rem
+                        blanditiis adipisci enim.
                     </div>
+                </div>
+                <div class="cv-header-contacts">
+                    <ul class="cv-header-contacts__list">
+                        <li class="cv-header-contacts__list-item">
+                            <h5 class="cv-header-contacts__list-title">Address</h5>
+                            <address>
+                                <a class="cv-header-contacts__list-link" href="https://goo.gl/maps/e8s5k1cQS69uA8Sh9"
+                                    target="_blank">Poland,Krakow</a>
+                            </address>
+                        </li>
+                        <li class="cv-header-contacts__list-item">
+                            <h5 class="cv-header-contacts__list-title">Linkedin</h5>
+                                <a class="cv-header-contacts__list-link" href="https://www.linkedin.com/in/anton-suhodolec-276283a3/"
+                                    target="_blank">anton-suhodolec</a>
+                        </li>
+                        <li class="cv-header-contacts__list-item">
+                            <h5 class="cv-header-contacts__list-title">Email</h5>
+                            <a class="cv-header-contacts__list-link" href="mailto:suhodoleca@gmail.com">suhodoleca@gmail.com</a>
+                        </li>
+                        <li class="cv-header-contacts__list-item">
+                            <h5 class="cv-header-contacts__list-title">Email</h5>
+                            <a class="cv-header-contacts__list-link" href="tel:+48792302263">+48792302263</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </header>
         <!-- / cv-header -->
+
         <!-- cv-main -->
         <main class="cv-main">
             <div class="cv-container">
                 <aside class="cv-main__about">
-                    <section class="cv-main__about-contacts">
-                        <h4 class="caption contact-caption">Contacts</h4>
-                        <ul class="list contact-list">
+                    <!-- <section class="cv-main__about-contacts"> -->
+                    <!-- <h4 class="caption contact-caption">Contacts</h4> -->
+                    <!-- <ul class="list contact-list">
                             <li class="list-item contact-list__item">
                                 <div class="icon">
                                     <i class="fas fa-map-marker-alt"></i>
@@ -78,8 +112,8 @@
                                     <div class="linkedin">anton-suhodolec</div>
                                 </div>
                             </li>
-                        </ul>
-                    </section>
+                        </ul> -->
+                    <!-- </section> -->
                     <section class="cv-main__about-education">
                         <h4 class="caption education-caption">Education</h4>
                         <div class="cv-main__about-education-item">
@@ -279,7 +313,7 @@ const whosOnline = (friends) => {
                 <p>
                     githubName: SuhodolecA
                     <time datetime="2022-04-17">2022-04-17</time>
-                </p>    
+                </p>
                 <p>
                     Challenge by rsschool
                     <a href="https://rs.school/js-en/" target="_blank">
