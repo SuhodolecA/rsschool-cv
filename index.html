@@ -150,48 +150,60 @@
                         <pre>
                                                 <code>
                     function smallEnough(a, limit) {
-                        return a.every(elem => elem &lt;= limit); 
+                    &nbsp;&nbsp;return a.every(elem => elem &lt;= limit); 
                         }
                                             </code>
                                         </pre>
                         <pre>
                                                 <code>
-                    function filterHomogenous(arrays) { 
-                        return arrays.filter(i => { 
-                            return i.length === 1 || i.every(i => typeof i === 'number') && i.length !== 0 || i.every(i => typeof i === 'string') && i.length !== 0; <br>
-                            }) 
-                        }
+                    function isIsogram(str){
+                    &nbsp;&nbsp;return new Set(<br>&nbsp;&nbsp;str.toLowerCase().split('')).size === str.length<br>&nbsp;&nbsp;);
+                    } 
                                                 </code> 
                                             </pre>
                         <pre>
                                                 <code>
-                    const whosOnline = (friends) => {
-                        const resultObj = {}; 
-                        friends.forEach(i => { 
-                            if (i.status === 'online' && i.lastActivity > 10) { 
-                            if (resultObj.hasOwnProperty('away')) { 
-                                resultObj.away.push(i.username); 
-                            } else { 
-                                resultObj.away = [i.username]; 
-                            } 
-                            } else if (i.status === 'online' && i.lastActivity &lt;= 10) { 
-                            if (resultObj.hasOwnProperty('online')) { 
-                                resultObj.online.push(i.username); 
-                            } else { 
-                                resultObj.online = [i.username]; 
-                            } 
-                            } else { 
-                            if (resultObj.hasOwnProperty('offline')) { 
-                                resultObj.offline.push(i.username); 
-                            } else { 
-                                resultObj.offline = [i.username]; 
-                            }                         
-                            } 
-                        })                         
-                        return resultObj; 
-                        } 
+                function deepCount(a) {
+                &nbsp;&nbsp;let result = a.length;
+                &nbsp;&nbsp;for(let item of a) {
+                &nbsp;&nbsp;&nbsp;&nbsp;if(Array.isArray(item)){
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result += deepCount(item);
+                &nbsp;&nbsp;&nbsp;&nbsp;}
+                &nbsp;&nbsp;}
+                &nbsp;&nbsp;return result;
+                }
                                                 </code>
-                    
+                                            </pre>
+                        <pre>
+                                                <code>
+            const validWord = function(dictionary, word){
+            &nbsp;&nbsp;const pearseDictionary = dictionary.join('|');
+            &nbsp;&nbsp;const regExp = new RegExp(`^(${pearseDictionary})+$`);
+            &nbsp;&nbsp;return regExp.test(word);
+            };
+                                                </code>
+                                            </pre>
+                        <pre>
+                                                <code>
+        function zipWith(fn,a0,a1) {
+        &nbsp;&nbsp;const result = [];
+        &nbsp;&nbsp;let length = (a0.length > a1.length) ? a1.length : &nbsp;&nbsp;a0.length;
+        &nbsp;&nbsp;for(let i = 0; i &lt; length; i++){
+        &nbsp;&nbsp;&nbsp;&nbsp;result.push(fn(a0[i],a1[i])); 
+        &nbsp;&nbsp;} 
+        &nbsp;&nbsp;return result;
+            };
+                                                </code>
+                                            </pre>
+                        <pre>
+                                                <code>
+    function nthFibo(n) {
+    &nbsp;&nbsp;let solution;
+    &nbsp;&nbsp;if(n &lt;= 2) return n - 1; 
+    &nbsp;&nbsp;solution = nthFibo(n - 1) + nthFibo(n - 2);
+    &nbsp;&nbsp;return solution; 
+    }
+                                                </code>
                                             </pre>
                     </div>
                     <div class="cv-main__education-skills">
@@ -217,41 +229,42 @@
                 </p>
                 <p>
                     Challenge by UpSkillMe
-                    <a href="https://github.com/rolling-scopes-school/js-fe-course-en/tree/main/UpSkillMe" target="_blank">
+                    <a href="https://github.com/rolling-scopes-school/js-fe-course-en/tree/main/UpSkillMe"
+                        target="_blank">
                         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             viewBox="0 0 552.8 205.3">
                             <style>
                                 .st0 {
                                     fill: #fff
                                 }
-        
+
                                 .st1 {
                                     clip-path: url(#SVGID_2_)
                                 }
-        
+
                                 .st2 {
                                     clip-path: url(#SVGID_4_)
                                 }
-        
+
                                 .st3 {
                                     clip-path: url(#SVGID_6_)
                                 }
-        
+
                                 .st4 {
                                     clip-path: url(#SVGID_8_)
                                 }
-        
+
                                 .st5 {
                                     fill: #fff;
                                     stroke: #000;
                                     stroke-width: 4;
                                     stroke-miterlimit: 10
                                 }
-        
+
                                 .st6 {
                                     clip-path: url(#SVGID_8_)
                                 }
-        
+
                                 .st6,
                                 .st7 {
                                     fill: none;
@@ -259,12 +272,12 @@
                                     stroke-width: 4;
                                     stroke-miterlimit: 10
                                 }
-        
+
                                 .st8,
                                 .st9 {
                                     clip-path: url(#SVGID_10_)
                                 }
-        
+
                                 .st9 {
                                     fill: none;
                                     stroke: #000;
@@ -283,8 +296,8 @@
                             <ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63"
                                 ry="51.8" />
                             <defs>
-                                <ellipse id="SVGID_1_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63"
-                                    ry="51.8" />
+                                <ellipse id="SVGID_1_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9"
+                                    rx="63" ry="51.8" />
                             </defs>
                             <clipPath id="SVGID_2_">
                                 <use xlink:href="#SVGID_1_" overflow="visible" />
@@ -301,11 +314,11 @@
                                         <use xlink:href="#SVGID_3_" overflow="visible" />
                                     </clipPath>
                                     <g id="Layer_1-2" class="st2">
-                                        <ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9"
-                                            rx="63" ry="51.8" />
+                                        <ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5"
+                                            cy="67.9" rx="63" ry="51.8" />
                                         <defs>
-                                            <ellipse id="SVGID_5_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9"
-                                                rx="63" ry="51.8" />
+                                            <ellipse id="SVGID_5_" transform="rotate(-37.001 420.46 67.88)" cx="420.5"
+                                                cy="67.9" rx="63" ry="51.8" />
                                         </defs>
                                         <clipPath id="SVGID_6_">
                                             <use xlink:href="#SVGID_5_" overflow="visible" />
@@ -326,8 +339,8 @@
                                             </g>
                                             <path transform="rotate(-37 420.799 68.802)" class="st6"
                                                 d="M357.8 17h125.9v103.7H357.8z" />
-                                            <ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9"
-                                                rx="63" ry="51.8" />
+                                            <ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5"
+                                                cy="67.9" rx="63" ry="51.8" />
                                             <path transform="rotate(-37 420.799 68.802)" class="st0"
                                                 d="M357.8 17h125.9v103.7H357.8z" />
                                             <defs>
@@ -346,8 +359,8 @@
                                             <path transform="rotate(-37.001 420.82 68.353)" class="st7"
                                                 d="M330.9-14.2h179.8v165.1H330.9z" />
                                         </g>
-                                        <ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9"
-                                            rx="63" ry="51.8" />
+                                        <ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5"
+                                            cy="67.9" rx="63" ry="51.8" />
                                         <path
                                             d="M392.4 61.3l10-7 12.3 17.5c2.1 2.8 3.7 5.8 4.9 9.1.7 2.5.5 5.2-.5 7.6-1.3 3-3.4 5.5-6.2 7.3-3.3 2.3-6.1 3.6-8.5 4-2.3.4-4.7 0-6.9-1-2.4-1.2-4.5-2.9-6.1-5.1l8.6-8c.7 1.1 1.6 2.1 2.6 2.9.7.5 1.5.8 2.4.8.7 0 1.4-.3 1.9-.7 1-.6 1.7-1.8 1.6-3-.3-1.7-1-3.4-2.1-4.7l-14-19.7zm30 11.1l9.1-7.2c1 1.2 2.3 2.1 3.7 2.6 2 .6 4.1.2 5.8-1.1 1.2-.8 2.2-1.9 2.6-3.3.6-1.8-.4-3.8-2.2-4.4-.3-.1-.6-.2-.9-.2-1.2-.1-3.3.4-6.4 1.7-5.1 2.1-9.1 2.9-12.1 2.6-2.9-.3-5.6-1.8-7.2-4.3-1.2-1.7-1.8-3.7-1.9-5.7 0-2.3.6-4.6 1.9-6.5 1.9-2.7 4.2-5 7-6.8 4.2-2.9 7.9-4.3 11.1-4.3 3.2 0 6.2 1.5 9 4.6l-9 7.1c-1.8-2.3-5.2-2.8-7.5-1l-.3.3c-1 .6-1.7 1.5-2.1 2.6-.3.8-.1 1.7.4 2.4.4.5 1 .9 1.7.9.8.1 2.2-.3 4.2-1.2 5-2.1 8.8-3.3 11.4-3.7 2.2-.4 4.5-.2 6.6.7 1.9.8 3.5 2.2 4.6 3.9 1.4 2 2.2 4.4 2.3 6.9.1 2.6-.6 5.1-2 7.3-1.8 2.7-4.1 5-6.8 6.8-5.5 3.8-10 5.4-13.6 4.8-3.9-.6-7.1-2.6-9.4-5.5z" />
                                     </g>
@@ -362,17 +375,6 @@
                 </p>
             </div>
         </footer>
-        <!-- <footer class="cv-footer">
-            <div class="cv-container">
-                <p>
-                    Coded by
-                    <a href="https://github.com/SuhodolecA/four-card-feature-section" target="_blank">
-                        Anton Sukhadolets
-                    </a>.
-                    <time datetime="2022-12-28">2022-12-28</time>
-                </p>
-            </div>
-        </footer> -->
         <!-- / cv-footer -->
 
     </div>
