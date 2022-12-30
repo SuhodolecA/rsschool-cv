@@ -22,33 +22,39 @@ ul {
     margin-bottom: 0.4rem;
 }
 
-p {
-    margin: 0;
-    // margin-bottom: 1rem;
+.secondary-title {
+    font-size: 1.8rem;
+    line-height: 1.43;
+    font-weight: 500;
+    color: hsl(195, 73%, 41%);
+    margin-bottom: .5rem;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    padding: 0;
+.thirdly-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.43;
+    color: hsl(0, 0%, 13%);
 }
 
-a {
-    color: hsl(0, 0%, 0%);
-    transition: all .3s linear;
-    // text-decoration-color: transparent;
+.fourthly-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.67;
+    color: hsl(0, 0%, 13%);
+}
 
-    &:hover {
-        font-weight: 600;
-        text-decoration-color: hsl(0, 0%, 20%);
-    }
+.info-text {
+    font-family: 'Prata', serif;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    color: hsl(0, 0%, 47%);
 }
 
 body {
     font-size: 1.5rem;
-    // font-family: 'Akaya Telivigala', cursive;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    // font-family: 'Prata', serif;
 }
 
 .cv-container {
@@ -56,49 +62,6 @@ body {
     margin: 0 auto;
     padding: 0 1.5rem;
 }
-
-.caption {
-    display: inline-block;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid;
-
-    @media (max-width: 34.375rem) {
-        font-size: 2rem;
-    }
-}
-
-.list-item {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.icon {
-    margin-right: .5rem;
-}
-
-.skills-list {
-    list-style-type: disc;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.education-name {
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.education-place {
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.education-years {
-    font-size: 1.7rem;
-}
-
 // === / common styles ===
 
 
@@ -106,17 +69,20 @@ body {
 .cv-header {
     padding: 3.2rem 1.7rem 1.6rem;
     background-color: hsla(193, 74%, 94%, 0.5);
+    margin-bottom: 2.4rem;
 
     .cv-container {
         display: flex;
         justify-content: space-between;
     }
+
     &-intro {
         flex-basis: 62%;
 
         &__personal-info {
             display: flex;
         }
+
         &__self-presentation {
             font-size: 1.3rem;
             line-height: 1.4;
@@ -124,6 +90,7 @@ body {
             margin-top: 1.4rem;
             max-width: 90%;
         }
+
         &__avatar {
             width: 12rem;
             height: 12rem;
@@ -141,6 +108,7 @@ body {
             color: hsl(0, 0%, 13%);
             margin-top: .6rem;
         }
+
         &__title {
             font-weight: 600;
             font-size: 1.8rem;
@@ -152,7 +120,7 @@ body {
     &-contacts {
         flex-basis: 30%;
 
-        &__list-item + &__list-item {
+        &__list-item+&__list-item {
             margin-top: .7rem;
         }
 
@@ -173,72 +141,6 @@ body {
 
     }
 }
-// .cv-header {
-//     margin-bottom: 3rem;
-//     padding: 1rem;
-
-//     &-content {
-//         display: flex;
-//         align-items: center;
-
-//         &__avatar {
-//             border-radius: 50%;
-//             border: 1px solid;
-//             overflow: hidden;
-//             width: 15rem;
-//             height: 15rem;
-//             background: url('../image/photo.jpg') center center no-repeat;
-//             background-size: cover;
-
-//             img {
-//                 width: 0;
-//                 height: 0;
-//             }
-
-//             @media (max-width: 46.875rem) {
-//                 width: 10rem;
-//                 height: 10rem;
-//             }
-
-//             @media (max-width: 28.125rem) {
-//                 width: 8rem;
-//                 height: 8rem;
-//             }
-//         }
-
-//         &__data {
-//             margin-left: 4.5rem;
-
-//             &-name {
-//                 font-size: 6rem;
-
-//                 @media (max-width: 66.875rem) {
-//                     font-size: 4rem;
-//                 }
-
-//                 @media (max-width: 46.875rem) {
-//                     font-size: 4rem;
-//                 }
-
-//                 @media (max-width: 34.375rem) {
-//                     font-size: 3rem;
-//                 }
-
-//                 @media (max-width: 25rem) {
-//                     font-size: 2rem;
-//                 }
-//             }
-
-//             &-title {
-//                 font-size: 3rem;
-
-//                 @media (max-width: 34.375rem) {
-//                     font-size: 2rem;
-//                 }
-//             }
-//         }
-//     }
-// }
 
 // === / header ===
 
@@ -246,110 +148,77 @@ body {
 .cv-main {
     .cv-container {
         display: flex;
-    }
-    &__about {
-        flex-basis: 30%;
-        margin-right: 1.5rem;
+        justify-content: space-between;
     }
 
-    &__description {
-        flex-basis: 70%;
+    &__projects {
+        flex-basis: 40%;
+    }
+    &__education {
+        flex-basis: 58%;
 
-        .title {
-            font-size: 3rem;
-            margin-bottom: .5rem;
-
-            @media (max-width: 34.375rem) {
-                font-size: 2rem;
-            }
-        }
-
-        p {
-            font-size: 2rem;
-
-            @media (max-width: 34.375rem) {
-                font-size: 1.5rem;
-            }
-        }
-
-        h4 {
-            font-size: 2rem;
-
-            @media (max-width: 34.375rem) {
-                font-size: 1.5rem;
-            }
-        }
-
-        ul {
-            list-style: circle;
-            margin-left: 1.5rem;
-        }
-
+        &-list,
         &-code {
-
-            pre + pre {
-                margin-top: 1em;
-            }
-
-            pre {
-                background-color: hsla(0, 0%, 80%, 0.99);
-                border-radius: 1em;
-                width: 100%;
-                height: 100%;
-                padding: 1em;
-                white-space: pre-line;
-
-                @media (max-width: 34.375rem) {
-                    font-size: 0.6em;
-                }
-
-                @media (max-width: 25rem) {
-                    font-size: .6rem;
-                }
-            }
+            margin-bottom: 2rem;
         }
     }
 
+    &__projects-list__item + &__projects-list__item{
+        margin-top: 2rem;
+    }
+
+    &__projects-list__item-link {
+        display: inline-block;
+        margin-top: 1.2rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 0 1rem .2rem hsla(0, 0%, 0%, .7);
+        transition: all .3s linear;
+
+        &:hover,
+        &:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 1rem .4rem hsl(195, 73%, 41%, .9);
+        }
+
+    }
+
+    &__projects-list__item-img {
+        width: 30rem;
+        height: 15rem;
+        display: block;
+    }
+
+    &__education-code {
+        pre + pre {
+            margin-top: 1em;
+        }
+
+        pre {
+            background-color: hsla(0, 0%, 80%, 0.99);
+            border-radius: 1em;
+            width: 100%;
+            height: 100%;
+            padding: 1em;
+            white-space: pre-line;
+
+            @media (max-width: 34.375rem) {
+                font-size: 0.6em;
+            }
+
+            @media (max-width: 25rem) {
+                font-size: .6rem;
+            }
+        }
+    }
 }
 
 // === / main ===
 
 // === footer ===
 .cv-footer {
-    margin-top: 1em;
-    svg {
-        width: 5rem;
-        height: 5rem;
-
-        @media (max-width: 34.375rem) {
-            width: 3rem;
-            height: 3rem;
-        }
-    }
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-
-        @media (max-width: 28.125rem) {
-            font-size: 1.2rem;
-        }
-    }
-
-    a {
-        margin-left: 1rem;
-
-        @media (max-width: 34.375rem) {
-            margin-left: .5rem;
-        }
-    }
-
-    time {
-        margin-left: 1em;
-    }
-
+    text-align: center;
+    padding: 1em;
 }
 
 // === / footer ===

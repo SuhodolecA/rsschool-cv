@@ -328,23 +328,33 @@ ul {
   margin-bottom: 0.4rem;
 }
 
-p {
-  margin: 0;
+.secondary-title {
+  font-size: 1.8rem;
+  line-height: 1.43;
+  font-weight: 500;
+  color: hsl(195deg, 73%, 41%);
+  margin-bottom: 0.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
+.thirdly-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.43;
+  color: hsl(0deg, 0%, 13%);
 }
 
-a {
-  color: hsl(0deg, 0%, 0%);
-  transition: all 0.3s linear;
+.fourthly-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.67;
+  color: hsl(0deg, 0%, 13%);
 }
-a:hover {
-  font-weight: 600;
-  -webkit-text-decoration-color: hsl(0deg, 0%, 20%);
-          text-decoration-color: hsl(0deg, 0%, 20%);
+
+.info-text {
+  font-family: "Prata", serif;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  color: hsl(0deg, 0%, 47%);
 }
 
 body {
@@ -359,52 +369,10 @@ body {
   padding: 0 1.5rem;
 }
 
-.caption {
-  display: inline-block;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 3px solid;
-}
-@media (max-width: 34.375rem) {
-  .caption {
-    font-size: 2rem;
-  }
-}
-
-.list-item {
-  display: flex;
-  margin-bottom: 1rem;
-}
-
-.icon {
-  margin-right: 0.5rem;
-}
-
-.skills-list {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.education-name {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.education-place {
-  font-weight: 500;
-  font-style: italic;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.education-years {
-  font-size: 1.7rem;
-}
-
 .cv-header {
   padding: 3.2rem 1.7rem 1.6rem;
   background-color: hsla(193deg, 74%, 94%, 0.5);
+  margin-bottom: 2.4rem;
 }
 .cv-header .cv-container {
   display: flex;
@@ -467,47 +435,41 @@ body {
 
 .cv-main .cv-container {
   display: flex;
+  justify-content: space-between;
 }
-.cv-main__about {
-  flex-basis: 30%;
-  margin-right: 1.5rem;
+.cv-main__projects {
+  flex-basis: 40%;
 }
-.cv-main__description {
-  flex-basis: 70%;
+.cv-main__education {
+  flex-basis: 58%;
 }
-.cv-main__description .title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+.cv-main__education-list, .cv-main__education-code {
+  margin-bottom: 2rem;
 }
-@media (max-width: 34.375rem) {
-  .cv-main__description .title {
-    font-size: 2rem;
-  }
+.cv-main__projects-list__item + .cv-main__projects-list__item {
+  margin-top: 2rem;
 }
-.cv-main__description p {
-  font-size: 2rem;
+.cv-main__projects-list__item-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem 0.2rem hsla(0deg, 0%, 0%, 0.7);
+  transition: all 0.3s linear;
 }
-@media (max-width: 34.375rem) {
-  .cv-main__description p {
-    font-size: 1.5rem;
-  }
+.cv-main__projects-list__item-link:hover, .cv-main__projects-list__item-link:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 1rem 0.4rem hsla(195deg, 73%, 41%, 0.9);
 }
-.cv-main__description h4 {
-  font-size: 2rem;
+.cv-main__projects-list__item-img {
+  width: 30rem;
+  height: 15rem;
+  display: block;
 }
-@media (max-width: 34.375rem) {
-  .cv-main__description h4 {
-    font-size: 1.5rem;
-  }
-}
-.cv-main__description ul {
-  list-style: circle;
-  margin-left: 1.5rem;
-}
-.cv-main__description-code pre + pre {
+.cv-main__education-code pre + pre {
   margin-top: 1em;
 }
-.cv-main__description-code pre {
+.cv-main__education-code pre {
   background-color: hsla(0deg, 0%, 80%, 0.99);
   border-radius: 1em;
   width: 100%;
@@ -516,48 +478,17 @@ body {
   white-space: pre-line;
 }
 @media (max-width: 34.375rem) {
-  .cv-main__description-code pre {
+  .cv-main__education-code pre {
     font-size: 0.6em;
   }
 }
 @media (max-width: 25rem) {
-  .cv-main__description-code pre {
+  .cv-main__education-code pre {
     font-size: 0.6rem;
   }
 }
 
 .cv-footer {
-  margin-top: 1em;
-}
-.cv-footer svg {
-  width: 5rem;
-  height: 5rem;
-}
-@media (max-width: 34.375rem) {
-  .cv-footer svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-.cv-footer p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-}
-@media (max-width: 28.125rem) {
-  .cv-footer p {
-    font-size: 1.2rem;
-  }
-}
-.cv-footer a {
-  margin-left: 1rem;
-}
-@media (max-width: 34.375rem) {
-  .cv-footer a {
-    margin-left: 0.5rem;
-  }
-}
-.cv-footer time {
-  margin-left: 1em;
+  text-align: center;
+  padding: 1em;
 }/*# sourceMappingURL=style.css.map */
