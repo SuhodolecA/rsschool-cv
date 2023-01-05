@@ -62,6 +62,7 @@ body {
     margin: 0 auto;
     padding: 0 1.5rem;
 }
+
 // === / common styles ===
 
 
@@ -74,6 +75,10 @@ body {
     .cv-container {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 43.75rem) {
+            flex-direction: column;
+        }
     }
 
     &-intro {
@@ -81,6 +86,13 @@ body {
 
         &__personal-info {
             display: flex;
+
+            @media (max-width: 43.75rem) {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
         }
 
         &__self-presentation {
@@ -89,6 +101,12 @@ body {
             color: hsl(0, 0%, 13%);
             margin-top: 1.4rem;
             max-width: 90%;
+
+            @media (max-width: 43.75rem) {
+                width: 100%;
+                text-align: center;
+                margin: 0 auto;
+            }
         }
 
         &__avatar {
@@ -120,9 +138,24 @@ body {
     &-contacts {
         flex-basis: 30%;
 
+        @media (max-width: 43.75rem) {
+            text-align: center;
+        }
+
         &__list-item+&__list-item {
             margin-top: .7rem;
+
+            @media (max-width: 43.75rem) {
+                margin-top: 0;
+            }
         }
+
+        &__list {
+            @media (max-width: 43.75rem) {
+                flex-direction: column;
+            }
+        }
+
 
         &__list-title {
             font-size: 1.5rem;
@@ -149,13 +182,40 @@ body {
     .cv-container {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 51.875rem) {
+            flex-direction: column;
+            text-align: center;
+        }
+
     }
 
     &__projects {
         flex-basis: 40%;
+
+        @media (max-width: 51.875rem) {
+            flex-basis: 100%;
+            margin-bottom: 2rem;
+        }
+
+        &-list {
+            @media (max-width: 51.875rem) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                row-gap: 1.5rem;
+            }
+        }
     }
+
     &__education {
         flex-basis: 58%;
+
+        @media (max-width: 51.875rem) {
+            flex-basis: 100%;
+        }
+
+
 
         &-list,
         &-code {
@@ -163,8 +223,12 @@ body {
         }
     }
 
-    &__projects-list__item + &__projects-list__item{
+    &__projects-list__item+&__projects-list__item {
         margin-top: 2rem;
+
+        @media (max-width: 51.875rem) {
+            margin-top: 0;
+        }
     }
 
     &__projects-list__item-link {
@@ -187,10 +251,15 @@ body {
         width: 30rem;
         height: 15rem;
         display: block;
+
+        @media (max-width: 25rem) {
+            width: 25rem;
+            height: 12rem;
+        }
     }
 
     &__education-code {
-        pre + pre {
+        pre+pre {
             margin-top: 1em;
         }
 
@@ -203,11 +272,11 @@ body {
             white-space: pre-line;
 
             @media (max-width: 34.375rem) {
-                font-size: 0.6em;
+                font-size: 0.8em;
             }
 
             @media (max-width: 25rem) {
-                font-size: .6rem;
+                font-size: .7em;
             }
         }
     }
@@ -221,11 +290,12 @@ body {
     padding: 1em;
     margin-top: 1.5rem;
     background-color: hsla(193, 74%, 94%, 0.5);
+
     svg {
         width: 5rem;
     }
 
-    p + p {
+    p+p {
         margin-top: 1.2rem;
     }
 }

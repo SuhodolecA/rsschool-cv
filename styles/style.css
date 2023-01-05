@@ -378,11 +378,24 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 43.75rem) {
+  .cv-header .cv-container {
+    flex-direction: column;
+  }
+}
 .cv-header-intro {
   flex-basis: 62%;
 }
 .cv-header-intro__personal-info {
   display: flex;
+}
+@media (max-width: 43.75rem) {
+  .cv-header-intro__personal-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 }
 .cv-header-intro__self-presentation {
   font-size: 1.3rem;
@@ -390,6 +403,13 @@ body {
   color: hsl(0deg, 0%, 13%);
   margin-top: 1.4rem;
   max-width: 90%;
+}
+@media (max-width: 43.75rem) {
+  .cv-header-intro__self-presentation {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 .cv-header-intro__avatar {
   width: 12rem;
@@ -416,8 +436,23 @@ body {
 .cv-header-contacts {
   flex-basis: 30%;
 }
+@media (max-width: 43.75rem) {
+  .cv-header-contacts {
+    text-align: center;
+  }
+}
 .cv-header-contacts__list-item + .cv-header-contacts__list-item {
   margin-top: 0.7rem;
+}
+@media (max-width: 43.75rem) {
+  .cv-header-contacts__list-item + .cv-header-contacts__list-item {
+    margin-top: 0;
+  }
+}
+@media (max-width: 43.75rem) {
+  .cv-header-contacts__list {
+    flex-direction: column;
+  }
 }
 .cv-header-contacts__list-title {
   font-size: 1.5rem;
@@ -437,17 +472,47 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 51.875rem) {
+  .cv-main .cv-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 .cv-main__projects {
   flex-basis: 40%;
 }
+@media (max-width: 51.875rem) {
+  .cv-main__projects {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 51.875rem) {
+  .cv-main__projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 1.5rem;
+  }
+}
 .cv-main__education {
   flex-basis: 58%;
+}
+@media (max-width: 51.875rem) {
+  .cv-main__education {
+    flex-basis: 100%;
+  }
 }
 .cv-main__education-list, .cv-main__education-code {
   margin-bottom: 2rem;
 }
 .cv-main__projects-list__item + .cv-main__projects-list__item {
   margin-top: 2rem;
+}
+@media (max-width: 51.875rem) {
+  .cv-main__projects-list__item + .cv-main__projects-list__item {
+    margin-top: 0;
+  }
 }
 .cv-main__projects-list__item-link {
   display: inline-block;
@@ -466,6 +531,12 @@ body {
   height: 15rem;
   display: block;
 }
+@media (max-width: 25rem) {
+  .cv-main__projects-list__item-img {
+    width: 25rem;
+    height: 12rem;
+  }
+}
 .cv-main__education-code pre + pre {
   margin-top: 1em;
 }
@@ -479,12 +550,12 @@ body {
 }
 @media (max-width: 34.375rem) {
   .cv-main__education-code pre {
-    font-size: 0.6em;
+    font-size: 0.8em;
   }
 }
 @media (max-width: 25rem) {
   .cv-main__education-code pre {
-    font-size: 0.6rem;
+    font-size: 0.7em;
   }
 }
 
